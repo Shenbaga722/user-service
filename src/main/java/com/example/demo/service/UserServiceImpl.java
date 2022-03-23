@@ -18,6 +18,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepo userRepo;
+    @Override
+    public List<User> getUsers(){
+        return (List<User>)userRepo.findAll();
+    }
 
 
 }

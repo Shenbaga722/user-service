@@ -18,6 +18,10 @@ public class UserController {
 
         @Autowired
         UserService userService;
-
+    @GetMapping("/getUsers")
+    public ResponseEntity<List<User>> getUsers(){
+        return new ResponseEntity<>(userService.getUsers(),HttpStatus.FOUND);
     }
+
+}
 
